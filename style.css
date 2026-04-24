@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* FUENTES */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffd6ec, #e4c1f9);
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* CORAZONES */
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.background span {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: #ff8fcf;
+  transform: rotate(45deg);
+  animation: float 15s linear infinite;
+}
+
+.background span::before,
+.background span::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: #ff8fcf;
+  border-radius: 50%;
+}
+
+.background span::before { top: -12px; }
+.background span::after { left: -12px; }
+
+.background span:nth-child(1){ left:10%; }
+.background span:nth-child(2){ left:30%; }
+.background span:nth-child(3){ left:50%; }
+.background span:nth-child(4){ left:70%; }
+.background span:nth-child(5){ left:90%; }
+
+@keyframes float {
+  0% { top:100%; opacity:0; }
+  50% { opacity:1; }
+  100% { top:-10%; opacity:0; }
+}
+
+/* NAV */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  color: white;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 120px;
+  color: white;
+}
+
+.hero button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #ff66b2;
+  border: none;
+  border-radius: 20px;
+  color: white;
+}
+
+/* SECCIONES */
+.section {
+  background: rgba(255,255,255,0.9);
+  margin: 20px;
+  padding: 50px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background: linear-gradient(135deg, #ff8fcf, #d291ff);
+  padding: 20px;
+  border-radius: 20px;
+  color: white;
+}
+
+/* CV BOTONES */
+.btn-cv {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #ff8fcf, #d291ff);
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+/* GALERIA */
+.galeria {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.galeria img {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin: 10px;
+}
+
+/* REDES */
+.redes {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.redes a {
+  background: white;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 25px;
+}
+
+.fa-whatsapp { color: #25D366; }
+.fa-instagram { color: #E1306C; }
+.fa-linkedin { color: #0077B5; }
+.fa-envelope { color: #EA4335; }
+
+footer {
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
